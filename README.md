@@ -1,4 +1,4 @@
-# MCPHub by AgentNXXT
+# MCP Servers by AgentNxt
 
 **Production-ready MCP servers for your entire stack. 37 servers, 900+ tools.**
 
