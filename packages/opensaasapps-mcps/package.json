@@ -1,0 +1,8 @@
+{
+  "name": "opensaasapps-mcps",
+  "private": true,
+  "workspaces": ["shared", "servers/*"],
+  "scripts": {
+    "build": "tsc -b servers/*/tsconfig.json"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "mcpServers": {
+    "opensaasapps-nocodb": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/nocodb/src/index.ts"],
+      "env": {
+        "NOCODB_URL": "https://nocodb.openautonomyx.com",
+        "NOCODB_TOKEN": "<your-nocodb-api-token>"
+      }
+    },
+    "opensaasapps-n8n": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/n8n/src/index.ts"],
+      "env": {
+        "N8N_URL": "https://auto.openautonomyx.com",
+        "N8N_API_KEY": "<your-n8n-api-key>"
+      }
+    },
+    "opensaasapps-erpnext": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/erpnext/src/index.ts"],
+      "env": {
+        "ERPNEXT_URL": "https://erp.openautonomyx.com",
+        "ERPNEXT_API_KEY": "<your-erpnext-api-key>",
+        "ERPNEXT_API_SECRET": "<your-erpnext-api-secret>"
+      }
+    },
+    "opensaasapps-ghost": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/ghost/src/index.ts"],
+      "env": {
+        "GHOST_URL": "https://blog.openautonomyx.com",
+        "GHOST_ADMIN_KEY": "<ghost-admin-api-key-id:secret>"
+      }
+    },
+    "opensaasapps-lago": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/lago/src/index.ts"],
+      "env": {
+        "LAGO_URL": "https://billing.openautonomyx.com",
+        "LAGO_API_KEY": "<your-lago-api-key>"
+      }
+    },
+    "opensaasapps-stalwart": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/stalwart/src/index.ts"],
+      "env": {
+        "STALWART_URL": "https://mail.openautonomyx.com",
+        "STALWART_USER": "admin",
+        "STALWART_PASS": "Static@12"
+      }
+    },
+    "opensaasapps-tuwunel": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/tuwunel/src/index.ts"],
+      "env": {
+        "MATRIX_URL": "https://chat.openautonomyx.com",
+        "MATRIX_ACCESS_TOKEN": "<your-matrix-access-token>"
+      }
+    },
+    "opensaasapps-evolution": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/evolution/src/index.ts"],
+      "env": {
+        "EVOLUTION_URL": "https://evo.openautonomyx.com",
+        "EVOLUTION_API_KEY": "evo_openautonomyx_2026"
+      }
+    },
+    "opensaasapps-wuzapi": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/wuzapi/src/index.ts"],
+      "env": {
+        "WUZAPI_URL": "https://wuzapi.openautonomyx.com",
+        "WUZAPI_TOKEN": "Static12Token"
+      }
+    },
+    "opensaasapps-mautic": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/mautic/src/index.ts"],
+      "env": {
+        "MAUTIC_URL": "https://marketing.openautonomyx.com",
+        "MAUTIC_USER": "admin",
+        "MAUTIC_PASS": "<your-mautic-password>"
+      }
+    },
+    "opensaasapps-matomo": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/matomo/src/index.ts"],
+      "env": {
+        "MATOMO_URL": "https://analytics.openautonomyx.com",
+        "MATOMO_TOKEN": "<your-matomo-token-auth>"
+      }
+    },
+    "opensaasapps-glitchtip": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/glitchtip/src/index.ts"],
+      "env": {
+        "GLITCHTIP_URL": "https://sentry.openautonomyx.com",
+        "GLITCHTIP_TOKEN": "<your-glitchtip-api-token>"
+      }
+    },
+    "opensaasapps-uptime-kuma": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/uptime-kuma/src/index.ts"],
+      "env": {
+        "UPTIME_KUMA_URL": "https://status.openautonomyx.com",
+        "UPTIME_KUMA_API_KEY": "<your-uptime-kuma-api-key>"
+      }
+    },
+    "opensaasapps-txtai": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/txtai/src/index.ts"],
+      "env": {
+        "TXTAI_URL": "https://txtai.openautonomyx.com"
+      }
+    },
+    "opensaasapps-calcom": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/calcom/src/index.ts"],
+      "env": {
+        "CALCOM_URL": "https://cal.openautonomyx.com",
+        "CALCOM_API_KEY": "<your-calcom-api-key>"
+      }
+    },
+    "opensaasapps-nextcloud": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/nextcloud/src/index.ts"],
+      "env": {
+        "NEXTCLOUD_URL": "https://next.openautonomyx.com",
+        "NEXTCLOUD_USER": "admin",
+        "NEXTCLOUD_PASS": "<your-nextcloud-password>"
+      }
+    },
+    "opensaasapps-limesurvey": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/limesurvey/src/index.ts"],
+      "env": {
+        "LIMESURVEY_URL": "https://survey.openautonomyx.com",
+        "LIMESURVEY_USER": "admin",
+        "LIMESURVEY_PASS": "Static@12"
+      }
+    },
+    "opensaasapps-postiz": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/postiz/src/index.ts"],
+      "env": {
+        "POSTIZ_URL": "https://social.openautonomyx.com",
+        "POSTIZ_API_KEY": "<your-postiz-api-key>"
+      }
+    },
+    "opensaasapps-rustfs": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/rustfs/src/index.ts"],
+      "env": {
+        "RUSTFS_URL": "https://storage.openautonomyx.com",
+        "RUSTFS_ACCESS_KEY": "rustfsadmin",
+        "RUSTFS_SECRET_KEY": "Static@12"
+      }
+    },
+    "opensaasapps-woocommerce": {
+      "command": "npx",
+      "args": ["tsx", "/Users/apple/Documents/opensaasapps-mcps/servers/woocommerce/src/index.ts"],
+      "env": {
+        "WOOCOMMERCE_URL": "https://shop.openautonomyx.com",
+        "WOO_CONSUMER_KEY": "<your-woo-consumer-key>",
+        "WOO_CONSUMER_SECRET": "<your-woo-consumer-secret>"
+      }
+    }
+  }
+}

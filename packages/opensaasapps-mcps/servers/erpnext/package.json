@@ -1,0 +1,10 @@
+{
+  "name": "@opensaasapps/mcp-erpnext",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": { "mcp-erpnext": "src/index.ts" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@opensaasapps/shared": "*"
+  }
+}

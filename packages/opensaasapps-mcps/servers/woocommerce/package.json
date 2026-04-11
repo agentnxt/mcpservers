@@ -1,0 +1,10 @@
+{
+  "name": "@opensaasapps/mcp-woocommerce",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": { "mcp-woocommerce": "src/index.ts" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@opensaasapps/shared": "*"
+  }
+}
