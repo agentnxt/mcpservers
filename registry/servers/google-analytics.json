@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema.json",
+  "id": "google-analytics-mcp-server",
+  "name": "Google Analytics MCP Server",
+  "description": "Read-only MCP server for Google Analytics Admin and GA4 reporting APIs, including account summaries, properties, standard reports, realtime reports, and custom dimensions or metrics.",
+  "status": "experimental",
+  "category": "analytics",
+  "tags": [
+    "google-analytics",
+    "ga4",
+    "reporting",
+    "marketing-analytics",
+    "google-cloud"
+  ],
+  "source": {
+    "type": "upstream",
+    "url": "https://github.com/googleanalytics/google-analytics-mcp",
+    "package": "analytics-mcp",
+    "license": "Apache-2.0"
+  },
+  "transports": [
+    "stdio",
+    "streamable-http"
+  ],
+  "runtime": {
+    "language": "python",
+    "minimumVersion": "3.10"
+  },
+  "deployment": {
+    "recommended": "cloud-run",
+    "docker": {
+      "image": "agentnxt/google-analytics-mcp-server",
+      "dockerfile": "google-analytics-mcp-server/Dockerfile",
+      "ports": [
+        "8080"
+      ]
+    },
+    "local": {
+      "command": "pipx",
+      "args": [
+        "run",
+        "analytics-mcp"
+      ]
+    }
+  },
+  "auth": {
+    "type": "google-application-default-credentials",
+    "requiredEnv": [
+      "GOOGLE_CLOUD_PROJECT"
+    ],
+    "optionalEnv": [
+      "GOOGLE_APPLICATION_CREDENTIALS",
+      "PORT"
+    ],
+    "notes": "Prefer Cloud Run service identity for hosted deployments. Grant the runtime service account Viewer access to the relevant GA4 account or property. Use GOOGLE_APPLICATION_CREDENTIALS only for local development or non-Google hosting."
+  },
+  "tools": [
+    "account summaries",
+    "property details",
+    "GA4 reports",
+    "realtime reports",
+    "custom dimensions and metrics"
+  ],
+  "maintainers": [
+    "agentnxt"
+  ],
+  "links": {
+    "upstream": "https://github.com/googleanalytics/google-analytics-mcp",
+    "pypi": "https://pypi.org/project/analytics-mcp/",
+    "googleAnalyticsAdminApi": "https://developers.google.com/analytics/devguides/config/admin/v1",
+    "googleAnalyticsDataApi": "https://developers.google.com/analytics/devguides/reporting/data/v1"
+  }
+}
