@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/agentnxt/mcp-registry/blob/main/registry/schema.json",
+  "title": "AgentNxt MCP Registry Server Entry",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "description",
+    "status",
+    "category",
+    "source",
+    "transports",
+    "deployment",
+    "auth",
+    "tools",
+    "maintainers"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "experimental", "stable", "deprecated"] },
+    "category": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "source": {
+      "type": "object",
+      "required": ["type", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string", "enum": ["local", "upstream", "remote", "container"] },
+        "url": { "type": "string" },
+        "package": { "type": "string" },
+        "license": { "type": "string" }
+      }
+    },
+    "transports": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["stdio", "sse", "streamable-http", "http"] },
+      "minItems": 1
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "language": { "type": "string" },
+        "minimumVersion": { "type": "string" }
+      }
+    },
+    "deployment": {
+      "type": "object",
+      "required": ["recommended", "docker"],
+      "additionalProperties": false,
+      "properties": {
+        "recommended": { "type": "string", "enum": ["docker", "npx", "pipx", "remote", "cloud-run", "custom"] },
+        "docker": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "image": { "type": "string" },
+            "dockerfile": { "type": "string" },
+            "ports": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "local": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "command": { "type": "string" },
+            "args": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "auth": {
+      "type": "object",
+      "required": ["type", "requiredEnv"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string" },
+        "requiredEnv": { "type": "array", "items": { "type": "string" } },
+        "optionalEnv": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "notes": { "type": "string" }
+      }
+    },
+    "tools": { "type": "array", "items": { "type": "string" } },
+    "maintainers": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "links": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}
