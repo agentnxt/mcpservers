@@ -85,3 +85,15 @@ packages/<server-name>/
 ---
 
 Copyright 2026. All rights reserved AgentNxt. An Autonomyx Platform.
+
+
+## Unboxd Platform Scaffolds
+
+Added scaffold servers for the first platform wave:
+- `microcloud-mcp-server`
+- `lxc-mcp-server`
+- `ansible-mcp-server`
+- `terraform-mcp-server`
+- `gcloud-run-mcp-server`
+
+See `docs/unboxd-platform-mcp-roadmap.md` for implementation direction.
