@@ -56,7 +56,7 @@ jobs:
         run: docker build -t ${{ matrix.server }}:ci ./${{ matrix.server }}
 
   publish:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch'
     needs: validate
     runs-on: ubuntu-latest
     strategy:
